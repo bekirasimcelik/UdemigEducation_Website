@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./Images/background1.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 100px;
+}
+
+/* Header CSS */
+
+.header {
+    background-color: rgba(97, 95, 95, 0.5);
+    display: flex;
+    height: 110px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+/* Main Area CSS*/
+.main {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main .info {
+    height: 100%;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main .info h1 {
+    color: rgba(207, 100, 23);
+}
+
+.main .info p {
+    color: grey;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+
+.main .info p b {
+    color: aquamarine;
+}
+
+.main .info button {
+    border: none;
+    background-color: aquamarine;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main .info button:hover {
+    background-color: rgb(8, 173, 118);
+}
+
+.table-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.table-container table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid gray;
+    color: #fff;
+}
+
+td:hover {
+    background-color: rgb(110, 103, 103);
+    /* background: url(./Images/background1.jpeg); */
+}
+
+th {
+    background-color: rgb(110,  103, 103);
+    color: black;
+}
+
+.main .info button:active {
+    transform: scale(0.97);
+}
+
+.header .title h1 {
+    color: aqua;
+}
+
+.header .title h1 span {
+    color: black;
+}
+
+/* header .title h1 i {
+    color: rgba(red, green, blue, alpha);
+} */
+
+.header nav ul {
+    display: flex;
+}
+
+.header nav ul li {
+    list-style: none;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: rgba(0, 255, 255, 0.5);
+    font-size: 25px;
+    margin-right: 10px;
+    transition: all 0.4s;
+}
+
+.header nav ul li a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/* FORM CSS*/
+.form-container {
+    width: 80%;
+    background-color: #bbbaba;
+    height: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+#name, #email, #message {
+    width: 98%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(18, 40, 55);
+}
+
+.btn-container {
+    position: relative;
+}
+
+.btn {
+    background-color: rgb(18, 40, 55);
+    position: absolute;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    margin-top: 20px;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.btn:hover {
+    background-color: rgba(0, 98, 255, 0.5);
+}
+
+footer {
+    background-color: #333;
+    height: 30px;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive */
+/* Html ile oluşturulan yapıların tüm cihazlarda görsel olarak uyumlu şekilde çalışmasına için responsive tasarım denilir*/
+/* Bu özellik UI geliştirme noktasında önemlidir. Bu sayede her cihaz için güzel bir arayüz elde edilmiş olur.
+responsive tasarım için media etiketleri kullanılır. Bu yapı oluşturulurken @media yapısı çağrılır ve yanında hangi ekran boyutunda
+hangi özelliklere sahip olması gerektiği belirtilir. Örneğin ekran belirli bir genişlik altına düşünce uyumsuz yapılara şu özellikler eklensin denilmektedir. */
+
+@media (max-width:800px) {
+    .header .nav {
+        display: none;
+    }
+    .header .title h1 {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 600px) {
+    .header .title h1 {
+        color: red;
+    }
+}
